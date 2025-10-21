@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - UpConstruction Bootstrap Template</title>
+  <title>Hariom Borewells</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="images/Logo.png" rel="icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -29,6 +28,35 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Make service cards clickable */
+    #services .service-item { cursor: pointer; }
+
+    /* Native dialog styling */
+    #serviceDialog {
+      width: min(720px, 92vw);
+      border: none;
+      padding: 25px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    }
+    #serviceDialog::backdrop { background: rgba(0,0,0,.45); }
+
+    /* Close button */
+    #serviceDialogClose {
+      position: absolute;
+      top: .5rem; right: .5rem;
+      background: transparent; border: 0;
+      font-size: 1.25rem; line-height: 1;
+      cursor: pointer;
+    }
+
+    #serviceDialog h3 { margin: 0 2rem .75rem 0; }
+
+    /* Content inside modal */
+    #serviceDialogDesc ul { margin: .5rem 0 0 1.25rem; }
+    #serviceDialogDesc li { margin: .25rem 0; }
+  </style>
 
 </head>
 
@@ -77,23 +105,23 @@
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
         <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-1.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-1.png" alt="">
         </div>
 
         <div class="carousel-item active">
-          <img src="assets/img/hero-carousel/hero-carousel-2.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-2.png" alt="">
         </div>
 
         <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-3.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-3.png" alt="">
         </div>
 
         <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-4.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-4.png" alt="">
         </div>
 
         <div class="carousel-item">
-          <img src="assets/img/hero-carousel/hero-carousel-5.jpg" alt="">
+          <img src="assets/img/hero-carousel/hero-carousel-5.png" alt="">
         </div>
 
         <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
@@ -196,79 +224,238 @@
 
     <!-- Services Section -->
     <section id="services" class="services section light-background">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Our Services & Products</h2>
-        <p class="w-75 align-items-center m-auto">At Hariom Borewells, we provide complete solutions for water systems, plumbing, and fittings. From borewell drilling to modern plumbing installations, we ensure reliable and long-lasting services for your home, farm, or business.</p>
-      </div><!-- End Section Title -->
-
+        <p class="w-75 align-items-center m-auto">
+          At Hariom Borewells, we provide complete solutions for water systems, plumbing, and fittings. From borewell drilling to modern plumbing installations, we ensure reliable and long-lasting services for your home, farm, or business.
+        </p>
+      </div>
+      <!-- End Section Title -->
+  
       <div class="container">
-
         <div class="row gy-4">
-
+  
+          <!-- Card 1 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
+            <div class="service-item position-relative"
+                 role="button" tabindex="0"
+                 data-key="borewell"
+                 aria-label="Open details for Borewell, Tubewell & Pump solutions">
               <div class="icon">
                 <i class="fa-solid fa-mountain-city"></i>
               </div>
-              <h3>Borewell Drilling & Maintenance</h3>
-              <p>Professional drilling and regular maintenance to ensure uninterrupted water supply.</p>
-              
+              <h3>Borewell, Tubewell & Pump solutions </h3>
+              <ul>
+                <li>borewell & Tubewell drilling</li>
+                <li>water pump installation & repair</li>
+                <li>regular maintenance & leakage repair</li>
+                <li>Annual Maintenance Contract ( AMC )</li>
+              </ul>
             </div>
-          </div><!-- End Service Item -->
-
+          </div>
+  
+          <!-- Card 2 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
+            <div class="service-item position-relative"
+                 role="button" tabindex="0"
+                 data-key="plumbing"
+                 aria-label="Open details for Complete Plumbing & Piping">
               <div class="icon">
                 <i class="fa-solid fa-arrow-up-from-ground-water"></i>
               </div>
-              <h3>Plumbing Installation</h3>
-              <p>End-to-end plumbing solutions for residential, commercial, and agricultural needs.</p>
-              
+              <h3>Complete Plumbing & Piping</h3>
+              <ul>
+                <li>Plumbing Installation</li>
+                <li>Pipe Fitting & Leakage Solutions</li>
+                <li>Our Materials: High-Quality UPVC, CPVC, & PVC Pipes and Fittings</li>
+              </ul>
             </div>
-          </div><!-- End Service Item -->
-
+          </div>
+  
+          <!-- Card 3 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
+            <div class="service-item position-relative"
+                 role="button" tabindex="0"
+                 data-key="irrigation"
+                 aria-label="Open details for Agricultural & Irrigation Solutions">
               <div class="icon">
                 <i class="fa-solid fa-compass-drafting"></i>
               </div>
-              <h3>Water Pump Installation & Repair</h3>
-              <p>Expert installation and quick repair of all types of water pumps.</p>
-              
+              <h3>Agricultural & Irrigation Solutions</h3>
+              <!-- loose lis; script handles normalization -->
+              <li>Drip Irrigation Systems</li>
+              <li>Sprinkler Pipes & Garden Pipes</li>
+              <li>Water Tanks & Storage Solutions</li>
+              <li>Submersible Pumps for Farms</li>
             </div>
-          </div><!-- End Service Item -->
-
+          </div>
+  
+          <!-- Card 4 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
+            <div class="service-item position-relative"
+                 role="button" tabindex="0"
+                 data-key="hardware"
+                 aria-label="Open details for Hardware & Material Supply">
               <div class="icon">
                 <i class="fa-solid fa-trowel-bricks"></i>
               </div>
-              <h3>Pipe Fitting & Leakage Fixes</h3>
-              <p>Durable pipe fittings and prompt leakage repair to avoid water wastage.</p>
-              
+              <h3>Hardware & Material Supply</h3>
+              <ul>
+                <li>Bath Fittings (Showers, Taps, etc.)</li>
+                <li>Essential Electrical Materials</li>
+                <li>All Other Hardware Materials</li>
+              </ul>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="fa-solid fa-helmet-safety"></i>
-              </div>
-              <h3>AMC (Annual Maintenance Contracts)</h3>
-              <p>Hassle-free yearly maintenance for borewells, pumps, and plumbing systems.</p>
-              
-            </div>
-          </div><!-- End Service Item -->
-
-          <!-- End Service Item -->
-
+          </div>
+  
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Services Section -->
+    <dialog id="serviceDialog" aria-labelledby="serviceDialogTitle" aria-describedby="serviceDialogDesc">
+      <button type="button" id="serviceDialogClose" aria-label="Close dialog">✕</button>
+      <h3 id="serviceDialogTitle"></h3>
+      <div id="serviceDialogDesc"></div>
+    </dialog>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const dialog   = document.getElementById('serviceDialog');
+        const titleEl  = document.getElementById('serviceDialogTitle');
+        const descEl   = document.getElementById('serviceDialogDesc');
+        const closeBtn = document.getElementById('serviceDialogClose');
+        const row      = document.querySelector('#services .row');
+  
+        // Map each card key to its unique HTML content (edit as needed)
+        const contentByKey = {
+          borewell: `
+            <p>💧 <strong>Hariom Borewells – Reliable Borewell &amp; Pump Experts You Can Trust</strong></p>
+            <p>When it comes to water, every drop matters — and every site is unique.</p>
+            <p>At Hariom Borewells &amp; Hardware, we don’t just drill — we design complete, long‑term water solutions customized for your land type, soil condition, and water depth.</p>
+            <p>Whether your area has sandy soil, rocky base, or uneven terrain, we recommend and install the perfect pump that performs efficiently and lasts longer.</p>
+            <p>From borewell drilling to submersible installation and AMC maintenance, everything is handled by our trained experts.</p>
+            <blockquote>“We suggest only what truly suits your land — not what’s easy to sell.”</blockquote>
+            <p><strong>Our Promise:</strong></p>
+            <ul>
+              <li>High‑performance, sand‑resistant pumps for every terrain</li>
+              <li>Accurate borewell depth &amp; casing with advanced machinery</li>
+              <li>Prompt service &amp; maintenance contracts</li>
+              <li>100% honest guidance, no hidden costs</li>
+            </ul>
+            <p>We’ve proudly helped hundreds of homes, farms, and industries get reliable water access — because for us, customer trust is our real reward.</p>
+          `,
+          "plumbing": "<p>🚿 Complete Plumbing &amp; Piping Solutions</p>\n<h4>Headline:</h4>\n<blockquote>“Strong Pipes. Honest Advice. Long-Lasting Plumbing You Can Trust.”</blockquote>\n<h4>Intro Paragraph:</h4>\n<p>At Hariom Borewells &amp; Hardware, we believe that plumbing isn’t just about fittings — it’s about trust, safety, and quality that lasts for years. Our team of experienced plumbers treats every project like their own home — giving family-like guidance to help you choose the right fittings, layouts, and material combinations for your space.</p>\n<h4>Our Services Include:</h4>\n<ul>\n  <li>Full plumbing installation for homes, buildings &amp; industries</li>\n  <li>Pipe fitting, leakage repair &amp; replacement</li>\n  <li>Bathroom, kitchen &amp; tank connection setups</li>\n  <li>Hot &amp; cold water pipeline installation</li>\n  <li>Complete piping solutions using UPVC, CPVC, and PVC materials</li>\n</ul>\n<h4>Why We’re Different:</h4>\n<p>What makes us unique is our honest, customer-first approach. We don’t just fit pipes — we first understand your home’s water flow, layout, and usage pattern, then suggest the best and most cost-effective method that will stay problem-free for years.</p>\n<p>Our plumbers are skilled, polite, and trusted locally, ensuring every fitting is leak-proof and perfectly aligned.</p>\n<blockquote>“We suggest the best method — just like we would advise our own family.”</blockquote>\n<h4>Our Material Quality (Rajkot Tested):</h4>\n<p>We proudly use high-quality pipes and fittings sourced directly from Rajkot manufacturers, known for their strength and durability. Each pipe is impact-tested for toughness — even if a vehicle passes over it or it’s hit with a hammer, it won’t break — it might just bend slightly, but it won’t crack.</p>\n<p>That’s why our products stand apart — strong, leak-proof, and built for real-life conditions.</p>\n<h4>Why Choose Us:</h4>\n<ul>\n  <li>Family-like guidance for plumbing design &amp; fitting</li>\n  <li>Rajkot-tested, durable UPVC/CPVC/PVC materials</li>\n  <li>On-time service with full transparency</li>\n  <li>100% leak-proof installation guarantee</li>\n</ul>\n<h4>Bottom Line:</h4>\n<blockquote>“Our plumbing isn’t just strong — it’s smart, safe, and done with care.”</blockquote>"
+  ,
+  "irrigation": "<p>🌾 Agricultural &amp; Irrigation Solutions</p>\n<h4>Headline:</h4>\n<blockquote>“Smart Irrigation Systems – One-Stop Solution for Every Farm.”</blockquote>\n<h4>Intro Paragraph:</h4>\n<p>At Hariom Borewells &amp; Hardware, we provide modern, efficient, and long-lasting irrigation solutions designed to save water and increase your farm’s productivity. From drip systems to sprinkler setups, submersible pumps to panels — everything you need for your field is available under one roof. You’ll never have to run to multiple suppliers again.</p>\n<h4>Our Products &amp; Services:</h4>\n<ul>\n  <li><strong>ISI Mark Sprinkler Systems:</strong> High-quality, durable sprinklers approved under ISI standards — built for long life and uniform water distribution.</li>\n  <li><strong>Government Subsidy Assistance:</strong> We help farmers complete all the necessary paperwork and process to avail irrigation-related government subsidies.</li>\n  <li><strong>Drip Irrigation Systems:</strong> Precise water delivery for all crop types to reduce wastage and improve yield.</li>\n  <li><strong>Farm Pumps &amp; Panels:</strong> Complete range of submersible and mono-block pumps, with control panels and protective panel boxes available.</li>\n  <li><strong>Garden Pipes:</strong> All varieties and all inch sizes available — strong, flexible, and premium-grade for household and farm use.</li>\n  <li><strong>Water Tanks &amp; Storage Solutions:</strong> Durable and weather-resistant tanks for all capacities.</li>\n</ul>\n<h4>Why Farmers Trust Us:</h4>\n<p>We don’t just sell equipment — we guide you at every step. From helping you choose the right irrigation type to assisting with subsidy forms, our team supports you like a family partner in your farming journey.</p>\n<blockquote>“From drip lines to control panels — everything for your farm, in one place.”</blockquote>\n<h4>Why Choose Hariom Borewells &amp; Hardware:</h4>\n<ul>\n  <li>ISI-marked irrigation products</li>\n  <li>Complete setup with pumps, panels &amp; covers</li>\n  <li>Full support in government subsidy process</li>\n  <li>All sizes &amp; varieties of pipes and accessories</li>\n  <li>Expert installation and after-service available</li>\n</ul>\n<h4>Bottom Line:</h4>\n<blockquote>“Smart irrigation begins here — quality you can trust, guidance you can rely on.”</blockquote>"
+  ,
+  "hardware": "<p>🧰 Hardware &amp; Material Supply</p>\n<h4>Headline:</h4>\n<blockquote>“All Your Hardware, Plumbing &amp; Electrical Needs — Under One Roof.”</blockquote>\n<h4>Intro Paragraph:</h4>\n<p>At Hariom Borewells, we believe in providing everything you need for construction, plumbing, and electrical work — all in one place. Whether you’re building a new home, repairing a pipeline, or upgrading your bath fittings, we have every product, every size, and every variety you could ask for — with guaranteed quality and long-lasting performance.</p>\n<h4>🚿 Bath Fittings &amp; Bathroom Accessories</h4>\n<p>We offer a wide range of bath fittings to match every style and budget — from luxury metallic designs to durable plastic models. All our fittings come with brand warranty and replacement support, ensuring complete peace of mind.</p>\n<p><strong>Available Products:</strong></p>\n<ul>\n  <li>Showers, taps, mixers, and jet sprays</li>\n  <li>Health faucets, angle valves &amp; sink fittings</li>\n  <li>Plastic and metal bath accessories in multiple color options</li>\n  <li>Premium chrome-plated fittings and rust-free materials</li>\n</ul>\n<blockquote>“Quality fittings that enhance your bathroom and last for years.”</blockquote>\n<h4>⚡️ Electrical Materials &amp; Cables</h4>\n<p>From switches to wiring, we stock both branded and local electrical materials that meet industry standards for safety and reliability.</p>\n<p><strong>Available Range:</strong></p>\n<ul>\n  <li>Wires &amp; Cables (all sizes and gauges)</li>\n  <li>Switchboards, MCBs, and circuit breakers</li>\n  <li>Conduits, junction boxes &amp; accessories</li>\n  <li>Lighting fixtures and connection materials</li>\n</ul>\n<blockquote>“Every wire, every cable — trusted brands, tested quality.”</blockquote>\n<h4>🔩 Hardware Tools &amp; Building Accessories</h4>\n<p>We take pride in being a complete hardware supplier — everything from small fasteners to large equipment is available right here.</p>\n<p><strong>Available Range:</strong></p>\n<ul>\n  <li>Bombay khile, nuts, bolts, and screws</li>\n  <li>Ropes, valves, sealants &amp; tools</li>\n  <li>Pipe supports, connectors &amp; clamps</li>\n  <li>General construction and maintenance tools</li>\n</ul>\n<blockquote>“From Bombay khile to ropes — everything you need, all in one place.”</blockquote>\n<h4>💪 Why Choose Hariom Borewells &amp; Hardware</h4>\n<ul>\n  <li>Huge variety in bath fittings, pipes, and electrical materials</li>\n  <li>Warranty-backed products from trusted brands</li>\n  <li>Both branded &amp; local options available</li>\n  <li>Ready stock — no waiting time</li>\n  <li>Honest pricing and customer-first guidance</li>\n</ul>\n<h4>Bottom Line:</h4>\n<blockquote>“One stop for everything — from borewell pipes to bathroom taps, from cables to khile — sab kuch yahin milega, Hariom Borewells &amp; Hardware mein.”</blockquote>"
+};
+  
+        let lastTrigger = null;
+  
+        const focusableSelector = [
+          'a[href]',
+          'button:not([disabled])',
+          'input:not([disabled])',
+          'select:not([disabled])',
+          'textarea:not([disabled])',
+          '[tabindex]:not([tabindex="-1"])'
+        ].join(',');
+  
+        function buildDetailsFromCard(card) {
+          const h3 = card.querySelector('h3');
+          const ul = card.querySelector('ul');
+          const looseLis = card.querySelectorAll(':scope > li');
+          const heading = h3 ? h3.textContent.trim() : 'Details';
+          let listHTML = '';
+          if (ul) {
+            listHTML = '<ul>' + ul.innerHTML + '</ul>';
+          } else if (looseLis.length) {
+            const items = Array.from(looseLis).map(li => '<li>' + li.textContent.trim() + '</li>').join('');
+            listHTML = '<ul>' + items + '</ul>';
+          } else {
+            listHTML = '<p>No additional details available.</p>';
+          }
+          return { heading, html: listHTML };
+        }
+  
+        function trapFocus(e) {
+          if (e.key !== 'Tab') return;
+          const focusables = dialog.querySelectorAll(focusableSelector);
+          if (!focusables.length) return;
+          const first = focusables[0];
+          const last  = focusables[focusables.length - 1];
+  
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+        }
+  
+        function openFrom(card) {
+          lastTrigger = card;
+          const key = card.getAttribute('data-key');
+          const h3 = card.querySelector('h3');
+          const fallback = buildDetailsFromCard(card);
+  
+          // Title: prefer card heading; fallback to generic
+          titleEl.textContent = h3 ? h3.textContent.trim() : 'Details';
+  
+          // Description: prefer mapped HTML content; fallback to extracted list
+          descEl.innerHTML = contentByKey[key] || fallback.html;
+  
+          dialog.showModal();
+          closeBtn.focus();
+        }
+  
+        function closeDialog() {
+          dialog.close();
+          if (lastTrigger) {
+            lastTrigger.focus();
+            lastTrigger = null;
+          }
+        }
+  
+        // Click activation
+        row.addEventListener('click', (e) => {
+          const card = e.target.closest('.service-item');
+          if (!card) return;
+          e.preventDefault();
+          openFrom(card);
+        });
+  
+        // Keyboard activation for cards (Enter/Space)
+        row.addEventListener('keydown', (e) => {
+          const card = e.target.closest('.service-item[tabindex]');
+          if (!card) return;
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openFrom(card);
+          }
+        });
+  
+        // Close controls
+        closeBtn.addEventListener('click', closeDialog);
+  
+        dialog.addEventListener('cancel', (e) => {
+          e.preventDefault();
+          closeDialog();
+        });
+  
+        // Backdrop click closes (click on dialog, not inside content)
+        dialog.addEventListener('click', (e) => {
+          if (e.target === dialog) closeDialog();
+        });
+  
+        // Trap focus while open
+        dialog.addEventListener('keydown', trapFocus);
+      });
+    </script>
+    <!-- /Services Section -->
 
     <!-- Alt Services Section -->
     <section id="alt-services-2" class="alt-services-2 section">
@@ -556,7 +743,7 @@
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="text" class="form-control" name="ph. number" placeholder="Your Phone number" required="">
                 </div>
 
                 <div class="col-md-12">
